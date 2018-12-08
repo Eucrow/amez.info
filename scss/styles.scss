@@ -1,0 +1,108 @@
+// VARIABLES
+$primary_color: #FFAA00;
+$primary_fonts: Asap, Helvetica, sans-serif;
+$title_fonts: Oleo Script, serif;
+
+@import '_reset';
+@import '_elements';
+
+
+// TILES
+.tile {
+    padding: 15px 5px;
+    text-align: center;
+}
+
+// FORMATING SECTIONS
+// There are two formats of the section: one with lines and one with a background color.
+.section__background{
+    background-color: $primary_color;
+}
+
+.section__lines{
+    border-top: 1px solid $primary_color;
+    border-bottom: 1px solid $primary_color;
+}
+
+// INTRODUCTION SECTION
+.introduction{
+    padding: 15px 5px;
+    text-align: center;
+
+    h1{
+        padding: 5px 0 15px 0;
+    }
+    
+    h2 {
+        padding: 10px 0;        
+    }
+
+    .img_social {
+        width: 25px;
+    }
+    
+    .social {
+        padding: 20px 0 10px 0;
+    }
+    
+    .social a {
+        padding: 0 12px; // Recomended size of icons is 48px, so put 12px of padding to get it.
+    }
+}
+
+img.imageHeader{
+    width: 100%;
+}
+
+
+// WORKS SECTION
+.works{
+
+    text-align: center;
+    padding: 30px 0 0 0;
+
+    .work{
+
+        &__title{
+            @extend h3;
+            font: 1.2rem $title_fonts;
+
+        }
+
+        &__description{
+            @extend p;
+        }
+    }
+}
+
+// SEARCHING WORK SECTION
+.searchingWork{
+    margin: 20px 0;
+    padding: 20px 5px;
+    text-align: center;
+}
+
+// FOOTER
+footer {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 0;
+
+    .footer__name {
+        font: bold 1rem $title_fonts;
+    }
+
+    .footer__contact {
+        vertical-align: middle;
+        font: 0.8rem $primary_fonts;
+
+        a img {
+            vertical-align: middle;
+            width: 18px;
+        }
+
+    }
+
+}
+
+

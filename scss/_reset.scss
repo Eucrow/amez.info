@@ -1,0 +1,17 @@
+// RESET
+* {
+    /*bxz*/
+    /*el tamaño de la caja incluye margin y border*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header, body, footer, ul, h1, h2, h3, p, div, img {
+    padding: 0px;
+    margin: 0px auto;
+}
+
+html{
+    font-size: 14px;
+}

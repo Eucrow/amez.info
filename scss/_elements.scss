@@ -1,0 +1,26 @@
+// ELEMENTS
+body {
+    max-width: 320px;
+}
+
+h1 {
+    font: 2.5rem $title_fonts;
+}
+
+h2 {
+    font: bold 1.1rem $primary_fonts;
+}
+
+h3 {
+    @extend h2;
+    font-weight: normal;
+}
+
+p {
+    font: 1rem $primary_fonts;
+}
+
+header,
+section {
+    background: #FFFFFF;
+}
