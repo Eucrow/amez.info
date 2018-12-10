@@ -1,14 +1,13 @@
 // ELEMENTS
 body {
-    max-width: 320px;
 }
 
 h1 {
-    font: 2.5rem $title_fonts;
+    font: 2.5rem $titleFonts;
 }
 
 h2 {
-    font: bold 1.1rem $primary_fonts;
+    font: bold 1.1rem $primaryFonts;
 }
 
 h3 {
@@ -17,7 +16,7 @@ h3 {
 }
 
 p {
-    font: 1rem $primary_fonts;
+    font: 1rem $primaryFonts;
 }
 
 header,

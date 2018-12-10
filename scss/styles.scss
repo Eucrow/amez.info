@@ -1,11 +1,12 @@
 // VARIABLES
-$primary_color: #FFAA00;
-$primary_fonts: Asap, Helvetica, sans-serif;
-$title_fonts: Oleo Script, serif;
+$primaryColor: #FFAA00;
+$primaryFonts: Asap, Helvetica, sans-serif;
+$titleFonts: Oleo Script, serif;
+$maxWeightBackground: 35vh;
+$topIntroductionPosition: 25vh;
 
 @import '_reset';
 @import '_elements';
-
 
 // TILES
 .tile {
@@ -15,19 +16,23 @@ $title_fonts: Oleo Script, serif;
 
 // FORMATING SECTIONS
 // There are two formats of the section: one with lines and one with a background color.
-.section__background{
-    background-color: $primary_color;
+@mixin section_colored {
+    background-color: $primaryColor;
 }
 
-.section__lines{
-    border-top: 1px solid $primary_color;
-    border-bottom: 1px solid $primary_color;
+@mixin section_lines {
+    border-top: 1px solid $primaryColor;
+    border-bottom: 1px solid $primaryColor;
 }
 
 // INTRODUCTION SECTION
 .introduction{
-    padding: 15px 5px;
+    // @include section_lines();
+    position: relative;
+    margin-top: $topIntroductionPosition;
+    padding: 25px 5px;
     text-align: center;
+    background-color: #FFFFFF;
 
     h1{
         padding: 5px 0 15px 0;
@@ -40,6 +45,10 @@ $title_fonts: Oleo Script, serif;
     .img_social {
         width: 25px;
     }
+
+    .myProfile {
+        @include section_lines()
+    }
     
     .social {
         padding: 20px 0 10px 0;
@@ -50,8 +59,15 @@ $title_fonts: Oleo Script, serif;
     }
 }
 
-img.imageHeader{
-    width: 100%;
+.background{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: $maxWeightBackground;
+    background-image: url('http://placekitten.com/320/200');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -61,40 +77,49 @@ img.imageHeader{
     text-align: center;
     padding: 30px 0 0 0;
 
-    .work{
+    .works__container{
 
-        &__title{
-            @extend h3;
-            font: 1.2rem $title_fonts;
-
-        }
-
-        &__description{
-            @extend p;
+        .work{
+    
+            &__title{
+                @extend h3;
+                font: 1.2rem $titleFonts;
+    
+            }
+    
+            &__description{
+                @extend p;
+            }
         }
     }
+
 }
 
 // SEARCHING WORK SECTION
 .searchingWork{
-    margin: 20px 0;
+    @include section_colored();
+    margin: 30px 0;
     padding: 20px 5px;
     text-align: center;
+    p {
+        font-weight: 600;
+    }
 }
 
 // FOOTER
 footer {
+    @include section_lines();
     text-align: center;
     margin: 20px 0;
     padding: 10px 0;
 
     .footer__name {
-        font: bold 1rem $title_fonts;
+        font: bold 1rem $titleFonts;
     }
 
     .footer__contact {
         vertical-align: middle;
-        font: 0.8rem $primary_fonts;
+        font: 0.8rem $primaryFonts;
 
         a img {
             vertical-align: middle;
@@ -104,5 +129,9 @@ footer {
     }
 
 }
+
+// RESPONSIVE
+@import '_responsive';
+
 
 

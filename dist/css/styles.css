@@ -6,26 +6,23 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-header, body, footer, ul, h1, h2, h3, .works .work__title, h3, .works .work__title, p, .works .work__description, div, img {
+header, body, footer, ul, h1, h2, h3, .works .works__container .work__title, h3, .works .works__container .work__title, p, .works .works__container .work__description, div, img {
   padding: 0px;
   margin: 0px auto; }
 
 html {
   font-size: 14px; }
 
-body {
-  max-width: 320px; }
-
 h1 {
   font: 2.5rem Oleo Script, serif; }
 
-h2, h3, .works .work__title {
+h2, h3, .works .works__container .work__title {
   font: bold 1.1rem Asap, Helvetica, sans-serif; }
 
-h3, .works .work__title {
+h3, .works .works__container .work__title {
   font-weight: normal; }
 
-p, .works .work__description {
+p, .works .works__container .work__description {
   font: 1rem Asap, Helvetica, sans-serif; }
 
 header,
@@ -36,42 +33,53 @@ section {
   padding: 15px 5px;
   text-align: center; }
 
-.section__background {
-  background-color: #FFAA00; }
-
-.section__lines {
-  border-top: 1px solid #FFAA00;
-  border-bottom: 1px solid #FFAA00; }
-
 .introduction {
-  padding: 15px 5px;
-  text-align: center; }
+  position: relative;
+  margin-top: 25vh;
+  padding: 25px 5px;
+  text-align: center;
+  background-color: #FFFFFF; }
   .introduction h1 {
     padding: 5px 0 15px 0; }
-  .introduction h2, .introduction h3, .introduction .works .work__title, .works .introduction .work__title {
+  .introduction h2, .introduction h3, .introduction .works .works__container .work__title, .works .works__container .introduction .work__title {
     padding: 10px 0; }
   .introduction .img_social {
     width: 25px; }
+  .introduction .myProfile {
+    border-top: 1px solid #FFAA00;
+    border-bottom: 1px solid #FFAA00; }
   .introduction .social {
     padding: 20px 0 10px 0; }
   .introduction .social a {
     padding: 0 12px; }
 
-img.imageHeader {
-  width: 100%; }
+.background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 35vh;
+  background-image: url("http://placekitten.com/320/200");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .works {
   text-align: center;
   padding: 30px 0 0 0; }
-  .works .work__title {
+  .works .works__container .work__title {
     font: 1.2rem Oleo Script, serif; }
 
 .searchingWork {
-  margin: 20px 0;
+  background-color: #FFAA00;
+  margin: 30px 0;
   padding: 20px 5px;
   text-align: center; }
+  .searchingWork p, .searchingWork .works .works__container .work__description, .works .works__container .searchingWork .work__description {
+    font-weight: 600; }
 
 footer {
+  border-top: 1px solid #FFAA00;
+  border-bottom: 1px solid #FFAA00;
   text-align: center;
   margin: 20px 0;
   padding: 10px 0; }
@@ -83,3 +91,23 @@ footer {
     footer .footer__contact a img {
       vertical-align: middle;
       width: 18px; }
+
+@media screen and (min-width: 400px) {
+  .introduction {
+    width: 80vw;
+    background-color: #FFAA00;
+    position: relative;
+    margin-top: 25vh; }
+  .works {
+    border-top: 1px solid #FFAA00;
+    border-bottom: 1px solid #FFAA00;
+    margin: 30px 0 0 0; } }
+
+@media screen and (min-width: 768px) {
+  .introduction {
+    width: 70vw; }
+  .works__container {
+    display: flex;
+    flex-wrap: wrap; }
+  .work {
+    width: 40%; } }

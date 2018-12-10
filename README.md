@@ -1,4 +1,4 @@
-# Marco A. Ámez pesonal web
+# Marco A. Ámez personal web
 
 ## What is this
 

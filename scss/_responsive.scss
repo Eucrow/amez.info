@@ -1,0 +1,47 @@
+// GREATHER THAN 320px
+
+@media screen 
+    and (min-width: 400px) {
+
+        .introduction {
+            width: 80vw;
+            background-color: $primaryColor;
+            position: relative;
+            margin-top: $topIntroductionPosition;
+        }
+
+        .works {
+            @include section_lines();
+            margin: 30px 0 0 0;
+        }
+
+}
+
+
+// GREATHER THAN 768px
+@media screen and (min-width: 768px) {
+    
+    .introduction {
+        width: 70vw;
+    }
+
+    .works__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .work {
+        width: 40%;
+    }
+}
+
+// GREATHER TAHN 1024px
+// @media screen and (min-width: 1024px) {
+
+
+// }
+
+// GREATHER TAHN 1024px
+// @media screen and (min-width: 1280px) {
+
+// }
