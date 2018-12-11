@@ -23,37 +23,64 @@
 
 }
 
-
 // GREATER THAN 768px
-@media screen and (min-width: 768px) {
+@media screen 
+    and (min-width: 768px) {
+
+        html {
+            font-size: 18px;
+        }
     
-    .introduction, {
-        width: 70vw;
-    }
+        .introduction, {
+            width: 70vw;
+        }
 
-    .works__container {
-        display: flex;
-        flex-wrap: wrap;
-    }
+        .works__container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
 
-    .work {
-        width: 40%;
-    }
+        .work {
+            width: 40%;
+        }
 
-    .searchingWork {
-        width: 70vw;
-    }
-
-    
+        .searchingWork {
+            width: 70vw;
+        }
+ 
 }
 
-// GREATHER TAHN 1024px
-// @media screen and (min-width: 1024px) {
+// GREATHER THAN 1280px
+@media screen
+    and (min-width: 1280px) {
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        header,
+        footer {
+            width: 100vw;
+        }
+
+        section.works {
+            width: 67vw;
+        }
+
+        section.searchingWork {
+            width: 33vw;
+            margin-bottom: 0px;
+
+            p {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                line-height: 1.5rem;
+            }
+        }
 
 
-// }
-
-// GREATHER TAHN 1024px
-// @media screen and (min-width: 1280px) {
-
-// }
+}

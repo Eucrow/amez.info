@@ -32,10 +32,6 @@ header,
 section {
   background: #FFFFFF; }
 
-.tile {
-  padding: 15px 5px;
-  text-align: center; }
-
 .introduction {
   position: relative;
   margin-top: 25vh;
@@ -70,8 +66,10 @@ section {
 .works {
   text-align: center;
   padding: 30px 0 0 0; }
-  .works .works__container .work__title {
-    font: 1.2rem Oleo Script, serif; }
+  .works .works__container .work {
+    padding: 15px 5px; }
+    .works .works__container .work__title {
+      font: 1.2rem Oleo Script, serif; }
 
 .searchingWork {
   background-color: #FFAA00;
@@ -113,12 +111,34 @@ footer {
     padding: 20px; } }
 
 @media screen and (min-width: 768px) {
+  html {
+    font-size: 18px; }
   .introduction {
     width: 70vw; }
   .works__container {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
   .work {
     width: 40%; }
   .searchingWork {
     width: 70vw; } }
+
+@media screen and (min-width: 1280px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; }
+  header,
+  footer {
+    width: 100vw; }
+  section.works {
+    width: 67vw; }
+  section.searchingWork {
+    width: 33vw;
+    margin-bottom: 0px; }
+    section.searchingWork p, section.searchingWork .works .works__container .work__description, .works .works__container section.searchingWork .work__description {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 1.5rem; } }

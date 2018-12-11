@@ -9,10 +9,10 @@ $topIntroductionPosition: 25vh;
 @import '_elements';
 
 // TILES
-.tile {
-    padding: 15px 5px;
-    text-align: center;
-}
+// .tile {
+//     padding: 15px 5px;
+//     text-align: center;
+// }
 
 // FORMATING SECTIONS
 // There are two formats of the section: one with lines and one with a background color.
@@ -82,6 +82,8 @@ $topIntroductionPosition: 25vh;
 
         .work{
     
+            padding: 15px 5px;
+            
             &__title{
                 @extend h3;
                 font: 1.2rem $titleFonts;
