@@ -1,7 +1,7 @@
 // VARIABLES
 $primaryColor: #FFAA00;
-$primaryFonts: Asap, Helvetica, sans-serif;
-$titleFonts: Oleo Script, serif;
+$primaryFonts: 'Asap', 'Helvetica', 'sans-serif';
+$titleFonts: 'Oleo Script', 'serif';
 $maxWeightBackground: 35vh;
 $topIntroductionPosition: 25vh;
 
@@ -83,7 +83,7 @@ $topIntroductionPosition: 25vh;
         .work{
     
             padding: 15px 5px;
-            
+
             &__title{
                 @extend h3;
                 font: 1.2rem $titleFonts;
