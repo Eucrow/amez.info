@@ -9,14 +9,14 @@ sass.compiler = require('node-sass');
 // copy required files to dist folder
 function copyToDistFolder(){
   return gulp.src('./index.html')
-      .pipe(gulp.dest('./dist'))
+      .pipe(gulp.dest('../amez.info.dist'))
       .pipe(browserSync.stream());
 }
 
 // copy required files to imgs folder
 function copyToImgsFolder(){
   return gulp.src('./imgs/*.svg')
-      .pipe(gulp.dest('./dist/imgs'))
+      .pipe(gulp.dest('../amez.info.dist/imgs'))
       .pipe(browserSync.stream());
 }
 
@@ -24,7 +24,7 @@ function copyToImgsFolder(){
 function compileSass(){
   return gulp.src('./scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('../amez.info.dist/css'))
     .pipe(browserSync.stream());
 }
 
@@ -36,11 +36,11 @@ function watchFiles(){
 }
 
 // Run static server and watch files
-gulp.task("watch", gulp.parallel(
+gulp.task("default", gulp.parallel(
   watchFiles, 
   function() {
     browserSync.init({
-        server: "./dist",
+        server: "../amez.info.dist",
         //server: "./",
         port: 8000,
         browser: 'chrome'
