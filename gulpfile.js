@@ -5,6 +5,10 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 
 sass.compiler = require('node-sass');
+
+var responsive = require('gulp-responsive-images');
+
+var webp = require('gulp-webp');
  
 // copy required files to dist folder
 function copyToDistFolder(){
@@ -47,4 +51,22 @@ gulp.task("default", gulp.parallel(
     });
   }
 ));
+
+/**
+ * Export images to responsive resolutions and export to webp format.
+ * Take images from img/originals directory.
+ * Use only when images has been changed.
+ */
+gulp.task('responsiveImages', function(){
+  return gulp.src('original_images/*.jpg') // WARNING: can't be spaces between 'jpg,' and 'png'
+      .pipe(responsive({ // create responsive images
+          '*.jpg':[
+              { width: 400, quality: 90, suffix: "_400" },
+              { width: 768, quality: 90, suffix: "_768" },
+              { width: 1280, quality: 85, suffix: "_1280" }
+          ]
+      }))
+      // .pipe(webp()) // export to webp format
+      .pipe(gulp.dest('imgs/'))
+})
 
