@@ -1,12 +1,12 @@
-// GREATER THAN 320px
+// GREATER THAN 400px
 @media screen 
     and (min-width: 400px) {
 
         .introduction {
-            width: 80vw;
+            // width: 80vw;
+            margin: 20vw 15vw 0 15vw;
             background-color: $primaryColor;
             position: relative;
-            margin-top: $topIntroductionPosition;
         }
 
         .works {

@@ -1,9 +1,9 @@
 // VARIABLES
-$primaryColor: #FFAA00;
+$primaryColor: #fcb8b3;
 $primaryFonts: 'Asap', 'Helvetica', 'sans-serif';
 $titleFonts: 'Oleo Script', 'serif';
 $maxWeightBackground: 35vh;
-$topIntroductionPosition: 25vh;
+$topIntroductionPosition: - 20vw;
 
 @import '_reset';
 @import '_elements';
@@ -25,12 +25,33 @@ $topIntroductionPosition: 25vh;
     border-bottom: 1px solid $primaryColor;
 }
 
+// .background{
+//     position: absolute;
+//     top: 0px;
+//     left: 0px;
+//     width: 100vw;
+//     height: $maxWeightBackground;
+//     background-image: url('http://placekitten.com/320/200');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+
+.bkg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.bkg img{
+    width: 100vw;
+    max-height: 450;
+    overflow: hidden;
+}
+
 // INTRODUCTION SECTION
 .introduction{
-    // @include section_lines();
     position: relative;
-    margin-top: $topIntroductionPosition;
-    padding: 25px 0;
+    padding: 25px;
     text-align: center;
     background-color: #FFFFFF;
 
@@ -59,18 +80,6 @@ $topIntroductionPosition: 25vh;
         padding: 0 12px; // Recomended size of icons is 48px, so put 12px of padding to get it.
     }
 }
-
-.background{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: $maxWeightBackground;
-    background-image: url('http://placekitten.com/320/200');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 
 // WORKS SECTION
 .works{
