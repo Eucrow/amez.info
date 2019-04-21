@@ -19,7 +19,7 @@ function copyToDistFolder(){
 
 // copy required files to imgs folder
 function copyToImgsFolder(){
-  return gulp.src('./imgs/*.svg')
+  return gulp.src('./imgs/*.{svg,jpg,webp}')
       .pipe(gulp.dest('../amez.info.dist/imgs'))
       .pipe(browserSync.stream());
 }
@@ -36,11 +36,12 @@ function compileSass(){
 function watchFiles(){
   gulp.watch('./scss/*.scss', compileSass);
   gulp.watch("./*.html").on('change', copyToDistFolder);
-  gulp.watch("./imgs/*.svg").on('change', copyToImgsFolder);
+  gulp.watch("./imgs/*.{svg,jpg,webp}").on('change', copyToImgsFolder);
 }
 
 // Run static server and watch files
 gulp.task("default", gulp.parallel(
+  copyToImgsFolder,
   watchFiles, 
   function() {
     browserSync.init({
@@ -66,7 +67,7 @@ gulp.task('responsiveImages', function(){
               { width: 1280, quality: 85, suffix: "_1280" }
           ]
       }))
-      // .pipe(webp()) // export to webp format
+      .pipe(webp()) // export to webp format
       .pipe(gulp.dest('imgs/'))
 })
 
