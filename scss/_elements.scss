@@ -20,7 +20,12 @@ p {
     font: 1rem $primaryFonts;
 }
 
-header,
 section {
     background: #FFFFFF;
+}
+
+header,
+main,
+footer{
+    margin: auto;
 }

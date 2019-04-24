@@ -1,21 +1,31 @@
+$widthGreater400 : 75vw; 
+$widthGreater768 : 65vw; 
+$widthGreater1280 : 60vw; 
+
 // GREATER THAN 400px
 @media screen 
     and (min-width: 400px) {
 
         .introduction {
-            // width: 80vw;
-            margin: 20vw 15vw 0 15vw;
+            margin-top: 15vw;
             background-color: $primaryColor;
             position: relative;
         }
 
+        .introduction,
+        .searchingWork,
+        header,
+        main,
+        footer{
+            width: $widthGreater400;
+        }
+
         .works {
             @include section_lines();
-            margin: 30px 0 0 0;
+            margin: 30px auto 0 auto;
         }
 
         .searchingWork {
-            width: 80vw;
             margin-left: auto;
             margin-right: auto;
             padding: 20px;
@@ -30,9 +40,13 @@
         html {
             font-size: 18px;
         }
-    
-        .introduction, {
-            width: 70vw;
+
+        .introduction,
+        .searchingWork,
+        header,
+        main,
+        footer{
+            width: $widthGreater768;
         }
 
         .works__container {
@@ -43,10 +57,6 @@
 
         .work {
             width: 40%;
-        }
-
-        .searchingWork {
-            width: 70vw;
         }
  
 }
@@ -61,9 +71,12 @@
             align-items: stretch;
         }
 
+        .introduction,
+        .searchingWork,
         header,
-        footer {
-            width: 100vw;
+        main,
+        footer{
+            width: $widthGreater1280;
         }
 
         section.works {
@@ -71,7 +84,6 @@
         }
 
         section.searchingWork {
-            width: 33vw;
             margin-bottom: 0px;
 
             p {
@@ -81,6 +93,4 @@
                 line-height: 1.5rem;
             }
         }
-
-
 }

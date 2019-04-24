@@ -11,121 +11,109 @@
 </head>
 <body>
   
-  <header>
+  <div class="parallax">
 
-    <!-- <div class="background"> -->
-    <!-- <div class="bkg">
-      <img srcset="imgs/_IGP3354_wide_400.jpg 400w,
-                   imgs/_IGP3354_wide_768.jpg 768w,
-                   imgs/_IGP3354_wide_1280.jpg 1280w"
 
-           sizes="(max-width: 400px) 400px,
-                 (max-width: 768px) 768px,
-                 1280px"
-           alt="">
-    </div> -->
-
-    <div class="bkg">
-      <picture>
-        <source 
-          type="image/webp"
-          srcset="imgs/_IGP3354_wide_400.webp 400w,
-                  imgs/_IGP3354_wide_768.webp 768w,
-                  imgs/_IGP3354_wide_1280.webp 1280w"
-          sizes="(max-width: 400px) 400px,
-                 (max-width: 768px) 768px,
-                 1280px">
-        <img
-          srcset="imgs/_IGP3354_wide_400.jpg 400w,
-              imgs/_IGP3354_wide_768.jpg 768w,
-              imgs/_IGP3354_wide_1280.jpg 1280w"
-          sizes="(max-width: 400px) 400px,
-                 (max-width: 768px) 768px,
-                 1280px"
-          alt="backgroun image">
-      </picture>
-      <!-- <picture>
-        <source srcset="imgs/_IGP3354_wide_400.webp">
-      </picture> -->
-    </div>
-    
-    <div class="introduction">
-      
-      <h1>Marco A. Ámez</h1>
-
-      <div class="myProfile">
-
-        <h2>Artesano web en HTML y CSS. Desarrollador en python/django. Inspección de integridad de datos con R.</h2>
-        
-        <h3>Interesado en la programación en el ámbito científico y medioambiental.</h3>
-        
-        <div class="social">
-          <a href="https://www.linkedin.com/in/marco-a-amez/"><img src="./imgs/linkedin.svg" class="img_social" alt="Link to Marco's LinkedIn profile"></a>
-          <a href="https://github.com/Eucrow"><img src="./imgs/github.svg" class="img_social" alt="Link to Marco's github profile"></a>
-        </div>
-        
+      <div class="bkg parallax__layer parallax__layer--back">
+          <picture>
+            <source 
+              type="image/webp"
+              srcset="imgs/_IGP3354_wide_400.webp 400w,
+                      imgs/_IGP3354_wide_768.webp 768w,
+                      imgs/_IGP3354_wide_1280.webp 1280w"
+              sizes="(max-width: 400px) 400px,
+                    (max-width: 768px) 768px,
+                    1280px">
+            <img
+              srcset="imgs/_IGP3354_wide_400.jpg 400w,
+                  imgs/_IGP3354_wide_768.jpg 768w,
+                  imgs/_IGP3354_wide_1280.jpg 1280w"
+              sizes="(max-width: 400px) 400px,
+                    (max-width: 768px) 768px,
+                    1280px"
+              alt="backgroun image">
+          </picture>
       </div>
-    </div>
 
-  </header>
+      <div class="parallax__layer parallax__layer--base">
 
-  <main>
-
-    <section class="works">
-
-        <p class="works__introduction">Actualmente trabajando en:</p>
-
-        <div class="works__container">
-          
-          <article class="tile work">
-            <h1 class="work__title">newCamp</h1>
-            <p class="work__description"> Actualización del programa CAMP de Tratamiento de Datos de Campañas de Arrastre
-            Comercial, originalmente desarrollado en dbase IV, a tecnologías web actuales.</p>
-          </article>
+        <header class="">
+          <div class="introduction">
+      
+            <h1>Marco A. Ámez</h1>
     
-          <article class="tile work">
-            <h1 class="work__title">esPEZies</h1>
-            <p class="work__description">Adaptación del libro 
-          <a href="http://www.ieo-santander.net/documentos/investigacion/libro/Especies-de-interes-pesquero-Galicia-Asturias-Cantabria.pdf">
-          "Especies de Interés Pesquero en Galicia, Asturias y Cantabria"</a> a formato online:
-          diseño y desarrollo de versión web, backend y APIS para consulta de la aplicación móvil.</p>
-          </article>
+            <div class="myProfile">
     
-          <article class="tile work">
-            <h1 class="work__title">Integridad de datos</h1>
-            <p class="work__description">Control de integridad de datos de muestreos de tallas recopilados en la Red
-            de Información y Muestreo del proyecto SAP en el IEO.</p>
-          </article>
-    
-          <article class="tile work">
-            <h1 class="work__title">Txiri Vita</h1>
-            <p class="work__description">Diseño y desarrollo de página web de <a href="http://www.txirivita.com">Txiri Vita</a>
-              (negocio familiar). Gestión redes sociales.</p>
-          </article>
-          
-        </div>
+              <h2>Artesano web en HTML y CSS. Desarrollador en python/django. Inspección de integridad de datos con R.</h2>
+              
+              <h3>Interesado en la programación en el ámbito científico y medioambiental.</h3>
+              
+              <div class="social">
+                <a href="https://www.linkedin.com/in/marco-a-amez/"><img src="./imgs/linkedin.svg" class="img_social" alt="Link to Marco's LinkedIn profile"></a>
+                <a href="https://github.com/Eucrow"><img src="./imgs/github.svg" class="img_social" alt="Link to Marco's github profile"></a>
+              </div>
+              
+            </div>
 
-  </section>
+          </div>
+        </header>
   
-  <section class="searchingWork">
-      <p>Ahora mismo tengo la mayor parte de mi tiempo ocupado con los proyectos en los que estoy involucrado,
-        pero si crees que tienes una propuesta que me pueda interesar no dudes en
-        contactar conmigo a través de <a href="https://www.linkedin.com/in/marco-a-amez/">Linkedin</a>.
-        </p>
-  </section>
+        <main class="">
+          <section class="works">
 
-</main>
+            <p class="works__introduction">Actualmente trabajando en:</p>
 
-  <footer>
-    <p class="footer__name">Marco A. Ámez</p>
-    <p class="footer__contact">
-      Contacto:
-      <a href="https://www.linkedin.com/in/marco-a-amez/" alt="Link to Marco's Linkedin profile">
-        LinkedIn
-      </a>
-    </p>
-  </footer>
+            <div class="works__container">
+              
+              <article class="tile work">
+                <h1 class="work__title">newCamp</h1>
+                <p class="work__description"> Actualización del programa CAMP de Tratamiento de Datos de Campañas de Arrastre
+                Comercial, originalmente desarrollado en dbase IV, a tecnologías web actuales.</p>
+              </article>
+        
+              <article class="tile work">
+                <h1 class="work__title">esPEZies</h1>
+                <p class="work__description">Adaptación del libro 
+              <a href="http://www.ieo-santander.net/documentos/investigacion/libro/Especies-de-interes-pesquero-Galicia-Asturias-Cantabria.pdf">
+              "Especies de Interés Pesquero en Galicia, Asturias y Cantabria"</a> a formato online:
+              diseño y desarrollo de versión web, backend y APIS para consulta de la aplicación móvil.</p>
+              </article>
+        
+              <article class="tile work">
+                <h1 class="work__title">Integridad de datos</h1>
+                <p class="work__description">Control de integridad de datos de muestreos de tallas recopilados en la Red
+                de Información y Muestreo del proyecto SAP en el IEO.</p>
+              </article>
+        
+              <article class="tile work">
+                <h1 class="work__title">Txiri Vita</h1>
+                <p class="work__description">Diseño y desarrollo de página web de <a href="http://www.txirivita.com">Txiri Vita</a>
+                  (negocio familiar). Gestión redes sociales.</p>
+              </article>
+              
+            </div>
 
+          </section>
+          <section class="searchingWork">
+            <p>Ahora mismo tengo la mayor parte de mi tiempo ocupado con los proyectos en los que estoy involucrado,
+              pero si crees que tienes una propuesta que me pueda interesar no dudes en
+              contactar conmigo a través de <a href="https://www.linkedin.com/in/marco-a-amez/">Linkedin</a>.
+              </p>
+          </section>
+        </main>
+
+        <footer>
+            <p class="footer__name">Marco A. Ámez</p>
+            <p class="footer__contact">
+              Contacto:
+              <a href="https://www.linkedin.com/in/marco-a-amez/" alt="Link to Marco's Linkedin profile">
+                LinkedIn
+              </a>
+            </p>
+        </footer>
+
+      </div>
+  </div>
 </body>
 </html>
 
