@@ -45,7 +45,7 @@ $topIntroductionPosition: - 20vw;
 
 .bkg img{
     width: 100vw;
-    max-height: 450;
+    // max-height: 450;
     overflow: hidden;
 }
 
@@ -87,7 +87,6 @@ $topIntroductionPosition: - 20vw;
     padding: 25px;
     text-align: center;
     background-color: #FFFFFF;
-    // z-index: 5;
 
 
     h1{
@@ -120,7 +119,7 @@ $topIntroductionPosition: - 20vw;
 .works{
 
     text-align: center;
-    padding: 30px 0 0 0;
+    padding: 30px 0;
 
     .works__container{
 
@@ -160,6 +159,7 @@ footer {
     text-align: center;
     margin: 20px auto 20px auto;
     padding: 10px 0;
+    background-color: #FFFFFF;
 
     .footer__name {
         font: bold 1rem $titleFonts;

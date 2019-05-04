@@ -1,6 +1,7 @@
 $widthGreater400 : 75vw; 
 $widthGreater768 : 65vw; 
 $widthGreater1280 : 60vw; 
+$widthGreater1800 : 1200px;
 
 // GREATER THAN 400px
 @media screen 
@@ -22,7 +23,8 @@ $widthGreater1280 : 60vw;
 
         .works {
             @include section_lines();
-            margin: 30px auto 0 auto;
+            margin-top: 30px;
+            margin-bottom: 0;
         }
 
         .searchingWork {
@@ -71,6 +73,10 @@ $widthGreater1280 : 60vw;
             align-items: stretch;
         }
 
+        .introduction {
+            margin-top: 10vw;
+        }
+
         .introduction,
         .searchingWork,
         header,
@@ -89,8 +95,28 @@ $widthGreater1280 : 60vw;
             p {
                 position: relative;
                 top: 50%;
-                transform: translateY(-50%);
+                // transform: translateY(-50%);
                 line-height: 1.5rem;
             }
         }
+}
+
+// GREATHER THAN 1800
+@media screen
+    and (min-width: 1800px) {
+
+        .introduction,
+        .searchingWork,
+        header,
+        main,
+        footer{
+            width: $widthGreater1800;
+        }
+
+        .bkg img{
+            min-height: 100vh;
+            object-fit: cover;
+            object-position: right;
+        }
+
 }
