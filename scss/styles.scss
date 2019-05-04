@@ -1,12 +1,13 @@
 // VARIABLES
-$primaryColor: #FFAA00;
+$primaryColor: #fcb8b3;
 $primaryFonts: 'Asap', 'Helvetica', 'sans-serif';
 $titleFonts: 'Oleo Script', 'serif';
 $maxWeightBackground: 35vh;
-$topIntroductionPosition: 25vh;
+$topIntroductionPosition: - 20vw;
 
 @import '_reset';
 @import '_elements';
+
 
 // TILES
 // .tile {
@@ -25,14 +26,68 @@ $topIntroductionPosition: 25vh;
     border-bottom: 1px solid $primaryColor;
 }
 
+// .background{
+//     position: absolute;
+//     top: 0px;
+//     left: 0px;
+//     width: 100vw;
+//     height: $maxWeightBackground;
+//     background-image: url('http://placekitten.com/320/200');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+
+.bkg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.bkg img{
+    width: 100vw;
+    // max-height: 450;
+    overflow: hidden;
+}
+
+// PARALLAX EFFECT
+.parallax{
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+  }
+
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+
+// The scale factor can be calculated with 1 + (translateZ * -1) / perspective
+.parallax__layer--back {
+    transform: translateZ(-5px) scale(6);
+ }
+
 // INTRODUCTION SECTION
 .introduction{
-    // @include section_lines();
     position: relative;
-    margin-top: $topIntroductionPosition;
-    padding: 25px 0;
+    padding: 25px;
     text-align: center;
     background-color: #FFFFFF;
+
 
     h1{
         padding: 5px 0 15px 0;
@@ -60,23 +115,11 @@ $topIntroductionPosition: 25vh;
     }
 }
 
-.background{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: $maxWeightBackground;
-    background-image: url('http://placekitten.com/320/200');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
 // WORKS SECTION
 .works{
 
     text-align: center;
-    padding: 30px 0 0 0;
+    padding: 30px 0;
 
     .works__container{
 
@@ -114,8 +157,9 @@ $topIntroductionPosition: 25vh;
 footer {
     @include section_lines();
     text-align: center;
-    margin: 20px 0;
+    margin: 20px auto 20px auto;
     padding: 10px 0;
+    background-color: #FFFFFF;
 
     .footer__name {
         font: bold 1rem $titleFonts;
