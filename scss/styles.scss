@@ -51,7 +51,7 @@ $topIntroductionPosition: - 20vw;
 
 // PARALLAX EFFECT
 .parallax{
-    perspective: 1px;
+    perspective: 2px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
@@ -78,7 +78,7 @@ $topIntroductionPosition: - 20vw;
 
 // The scale factor can be calculated with 1 + (translateZ * -1) / perspective
 .parallax__layer--back {
-    transform: translateZ(-5px) scale(6);
+    transform: translateZ(-5px) scale(3.6);
  }
 
 // INTRODUCTION SECTION
