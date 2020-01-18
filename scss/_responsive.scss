@@ -95,7 +95,6 @@ $widthGreater1800 : 1200px;
             p {
                 position: relative;
                 top: 50%;
-                // transform: translateY(-50%);
                 line-height: 1.5rem;
             }
         }
@@ -111,6 +110,13 @@ $widthGreater1800 : 1200px;
         main,
         footer{
             width: $widthGreater1800;
+        }
+        section.searchingWork {
+            margin-bottom: 0px;
+
+            p {
+                top: auto;
+            }
         }
 
         .bkg img{
