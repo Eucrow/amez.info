@@ -3,3 +3,4 @@ assets/
 node_modules/
 original_images/
 cheatsheet.md
+*.xd
