@@ -1,29 +1,23 @@
 // VARIABLES
-$primaryColor: #fcb8b3;
-$primaryFonts: 'Asap', 'Helvetica', 'sans-serif';
-$titleFonts: 'Oleo Script', 'serif';
+// $primaryColor: #fcb8b3;
+$primaryColor: #f5df4d;
+$primaryFonts: "Asap", "Helvetica", "sans-serif";
+$titleFonts: "Oleo Script", "serif";
 $maxWeightBackground: 35vh;
-$topIntroductionPosition: - 20vw;
+$topIntroductionPosition: -20vw;
 
-@import '_reset';
-@import '_elements';
-
-
-// TILES
-// .tile {
-//     padding: 15px 5px;
-//     text-align: center;
-// }
+@import "_reset";
+@import "_elements";
 
 // FORMATING SECTIONS
 // There are two formats of the section: one with lines and one with a background color.
 @mixin section_colored {
-    background-color: $primaryColor;
+  background-color: $primaryColor;
 }
 
 @mixin section_lines {
-    border-top: 1px solid $primaryColor;
-    border-bottom: 1px solid $primaryColor;
+  border-top: 1px solid $primaryColor;
+  border-bottom: 1px solid $primaryColor;
 }
 
 // .background{
@@ -38,24 +32,23 @@ $topIntroductionPosition: - 20vw;
 // }
 
 .bkg {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
-.bkg img{
-    width: 100vw;
-    // max-height: 450;
-    overflow: hidden;
+.bkg img {
+  width: 100vw;
+  // max-height: 450;
+  overflow: hidden;
 }
 
 // PARALLAX EFFECT
-.parallax{
-    perspective: 2px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-
+.parallax {
+  perspective: 2px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .parallax__layer {
@@ -67,119 +60,107 @@ $topIntroductionPosition: - 20vw;
 }
 
 .parallax__group {
-    position: relative;
-    height: 100vh;
-    transform-style: preserve-3d;
-  }
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
 
 .parallax__layer--base {
-    transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 // The scale factor can be calculated with 1 + (translateZ * -1) / perspective
 .parallax__layer--back {
-    transform: translateZ(-5px) scale(3.6);
- }
+  transform: translateZ(-5px) scale(3.6);
+}
 
 // INTRODUCTION SECTION
-.introduction{
-    position: relative;
-    padding: 25px;
-    text-align: center;
-    background-color: #FFFFFF;
+.introduction {
+  position: relative;
+  padding: 25px;
+  text-align: center;
+  background-color: #ffffff;
 
+  h1 {
+    padding: 5px 0 15px 0;
+  }
 
-    h1{
-        padding: 5px 0 15px 0;
-    }
-    
-    h2 {
-        padding: 10px 0;        
-    }
+  h2 {
+    padding: 10px 0;
+  }
 
-    .img_social {
-        width: 25px;
-    }
+  .img_social {
+    width: 25px;
+  }
 
-    .myProfile {
-        @include section_lines();
-        padding: 0 5px;
-    }
-    
-    .social {
-        padding: 20px 0 10px 0;
-    }
-    
-    .social a {
-        padding: 0 12px; // Recomended size of icons is 48px, so put 12px of padding to get it.
-    }
+  .myProfile {
+    @include section_lines();
+    padding: 0 5px;
+  }
+
+  .social {
+    padding: 20px 0 10px 0;
+  }
+
+  .social a {
+    padding: 0 12px; // Recomended size of icons is 48px, so put 12px of padding to get it.
+  }
 }
 
 // WORKS SECTION
-.works{
+.works {
+  text-align: center;
+  padding: 30px 0;
 
-    text-align: center;
-    padding: 30px 0;
+  .works__container {
+    .work {
+      padding: 15px 5px;
 
-    .works__container{
+      &__title {
+        @extend h3;
+        font: 1.2rem $titleFonts;
+      }
 
-        .work{
-    
-            padding: 15px 5px;
-
-            &__title{
-                @extend h3;
-                font: 1.2rem $titleFonts;
-    
-            }
-    
-            &__description{
-                @extend p;
-            }
-        }
+      &__description {
+        @extend p;
+      }
     }
-
+  }
 }
 
 // SEARCHING WORK SECTION
-.searchingWork{
-    @include section_colored();
-    margin: 30px 0;
-    padding: 20px 5px;
-    p {
-        
-        font-weight: 600;
-        text-align: center;
-    }
+.searchingWork {
+  @include section_colored();
+  margin: 30px 0;
+  padding: 20px 5px;
+  p {
+    font-weight: 600;
+    text-align: center;
+  }
 }
 
 // FOOTER
 footer {
-    @include section_lines();
-    text-align: center;
-    margin: 20px auto 20px auto;
-    padding: 10px 0;
-    background-color: #FFFFFF;
+  @include section_lines();
+  text-align: center;
+  margin: 20px auto 20px auto;
+  padding: 10px 0;
+  background-color: #ffffff;
 
-    .footer__name {
-        font: bold 1rem $titleFonts;
+  .footer__name {
+    font: bold 1rem $titleFonts;
+  }
+
+  .footer__contact {
+    vertical-align: middle;
+    font: 0.8rem $primaryFonts;
+
+    a img {
+      vertical-align: middle;
+      width: 18px;
     }
-
-    .footer__contact {
-        vertical-align: middle;
-        font: 0.8rem $primaryFonts;
-
-        a img {
-            vertical-align: middle;
-            width: 18px;
-        }
-
-    }
-
+  }
 }
 
 // RESPONSIVE
-@import '_responsive';
-
-
-
+@import "_responsive";
