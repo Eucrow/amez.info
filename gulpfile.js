@@ -12,13 +12,25 @@ var webp = require("gulp-webp");
 
 const cleanCSS = require("gulp-clean-css");
 
+const htmlmin = require("gulp-htmlmin");
+
 // minify css
+// minify css of distribution folder
 gulp.task("minify-css", () => {
   return gulp
     .src("../amez.info.dist/css/*.css")
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(gulp.dest("../amez.info.dist/css"));
 });
+
+gulp.task("minify-html", () => {
+  return gulp
+    .src("../amez.info.dist/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+    .pipe(gulp.dest("../amez.info.dist/"));
+});
+
+gulp.task("minify", gulp.parallel("minify-css", "minify-html"));
 
 // copy required files to dist folder
 function copyToDistFolder() {
